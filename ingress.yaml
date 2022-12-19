@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: knote
+                name: ingress-demo
                 port:
-                  number: 3000
+                  number: 8080
