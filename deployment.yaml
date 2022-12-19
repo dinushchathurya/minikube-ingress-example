@@ -1,17 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ingress-demo
+  name: knote
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: myapp
-  replicas: 1
+      app: knote
   template:
     metadata:
       labels:
-        app: myapp
+        app: knote
     spec:
       containers:
-      - name: ingress-container
-        image: gcr.io/google-samples/hello-app:1.0
+        - name: app
+          image: limarktest/nodejs-docker:latest
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always

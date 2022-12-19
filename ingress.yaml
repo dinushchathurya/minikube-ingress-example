@@ -15,4 +15,4 @@ spec:
               service:
                 name: ingress-demo
                 port:
-                  number: 8080
+                  number: 3000
